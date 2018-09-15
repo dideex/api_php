@@ -1,15 +1,6 @@
 <?php
-// Роутер
 function route($method, $urlData, $formData) {
-     
-    // Получение информации о товаре
-    // GET /goods/{goodId}
     if ($method === 'GET') {
-        // Получаем id товара
- 
-        // Вытаскиваем товар из базы...
- 
-        // Выводим ответ клиенту
         echo json_encode(
             array(
                 'ladder' => array(
@@ -67,7 +58,6 @@ function route($method, $urlData, $formData) {
  
         return;
     }
-    // Возвращаем ошибку
     header('HTTP/1.0 400 Bad Request');
     echo json_encode(array(
         'error' => 'Bad Request'

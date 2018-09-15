@@ -1,15 +1,6 @@
 <?php
-// Роутер
 function route($method, $urlData, $formData) {
-     
-    // Получение информации о товаре
-    // GET /goods/{goodId}
     if ($method === 'GET') {
-        // Получаем id товара
- 
-        // Вытаскиваем товар из базы...
- 
-        // Выводим ответ клиенту
         echo json_encode(
             array(
                 'type' => array(
@@ -75,25 +66,8 @@ function route($method, $urlData, $formData) {
                 'color' => 4000
             )
         );
-        //   energy: {
-        //     //	Цены на тип сушилки
-        //     '0': 0, //	Водянной
-        //     '1': 3100,
-        //   }, //	Электрический
-        //   rail: {
-        //     '0': 1,
-        //     '1': 1.13,
-        //   }, //	Цена на группировку перемычек
-        //   gate: {
-        //     //	Цена для варианта подключения
-        //     '0': 0, //	Универсальное
-        //     '1': 1000,
-        //   }, //	Боковое 110%
-        //   color: 4000, //	Цена за перекраску
-        // }
         return;
     }
-    // Возвращаем ошибку
     header('HTTP/1.0 400 Bad Request');
     echo json_encode(array(
         'error' => 'Bad Request'
