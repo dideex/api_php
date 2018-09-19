@@ -36,21 +36,21 @@ function route($method, $urlData, $formData) {
                 'fType' => array(
                     'width' => array(
                         'min' => 400,
-                        'max' => 600,
+                        'max' => 800,
                     ),
                     'height' => array(
                         'min' => 500,
-                        'max' => 1200,
+                        'max' => 600,
                     ),
                 ),
                 'gType' => array(
                     'width' => array(
                         'min' => 400,
-                        'max' => 600,
+                        'max' => 800,
                     ),
                     'height' => array(
-                        'min' => 500,
-                        'max' => 1200,
+                        'min' => 300,
+                        'max' => 300,
                     ),
                 ),
             )
