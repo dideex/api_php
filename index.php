@@ -4,6 +4,12 @@ $method = $_SERVER['REQUEST_METHOD'];
 // Получаем данные из тела запроса
 $formData = getFormData($method);
 
+if (!headers_sent()) {
+    header('Access-Control-Allow-Origin: *');
+    header('Content-Type','text/json; charset=utf-8');
+} else {
+    // обработка ошибки или уведомление разработчикам
+}
 // Получение данных из тела запроса
 function getFormData($method) {
  
